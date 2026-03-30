@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Moje Prywatne VOD</title>
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <style>
+    body { background: #111; color: #fff; font-family: Arial; padding: 20px; }
+    .movie { margin-bottom: 40px; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+
+<h1>Moje Prywatne VOD</h1>
+
+<div class="movie">
+  <h2>Film 1</h2>
+  <video id="player1" controls playsinline>
+    <source src="LINK_DO_FILMU_1" type="video/mp4">
+  </video>
+</div>
+
+<div class="movie">
+  <h2>Film 2</h2>
+  <video id="player2" controls playsinline>
+    <source src="LINK_DO_FILMU_2" type="video/mp4">
+  </video>
+</div>
+
+<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+<script>
+  const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+</script>
+
+</body>
+</html>
